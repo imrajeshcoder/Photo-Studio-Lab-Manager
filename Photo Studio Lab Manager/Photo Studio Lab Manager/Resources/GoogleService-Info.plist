@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleExecutable</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>CLIENT_ID</key>
+	<string>132562912248-ijsh4ep5784fde6u5ve14sceii81pba2.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.132562912248-ijsh4ep5784fde6u5ve14sceii81pba2</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDpjxK_toqVdxpl-RrpHobeYTtIh68WP_I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>132562912248</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.coder.imrajesh.Photo-Studio-Lab-Manager</string>
+	<key>PROJECT_ID</key>
+	<string>photo-studio-lab-manage</string>
+	<key>STORAGE_BUCKET</key>
+	<string>photo-studio-lab-manage.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:132562912248:ios:e91db55098a5a6adb70c0d</string>
+</dict>
+</plist>

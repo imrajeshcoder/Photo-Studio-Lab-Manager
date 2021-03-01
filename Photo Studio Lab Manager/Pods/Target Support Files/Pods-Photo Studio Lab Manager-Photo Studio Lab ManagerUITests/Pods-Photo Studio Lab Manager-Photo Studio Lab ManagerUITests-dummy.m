@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Photo_Studio_Lab_Manager_Photo_Studio_Lab_ManagerUITests : NSObject
+@end
+@implementation PodsDummy_Pods_Photo_Studio_Lab_Manager_Photo_Studio_Lab_ManagerUITests
+@end

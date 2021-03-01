@@ -1,0 +1,6 @@
+framework module Pods_Photo_Studio_Lab_Manager_Photo_Studio_Lab_ManagerUITests {
+  umbrella header "Pods-Photo Studio Lab Manager-Photo Studio Lab ManagerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

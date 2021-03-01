@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Panel Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FAPanelController" customModule="FAPanels" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146" y="100"/>
+        </scene>
+        <!--Left MenuVC-->
+        <scene sceneID="LRP-fa-e8z">
+            <objects>
+                <viewController storyboardIdentifier="PSLMLeftMenuVC" id="KA4-Lv-QGY" customClass="PSLMLeftMenuVC" customModule="Photo_Studio_Lab_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D9N-tT-SJ0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qHb-cw-q1t">
+                                <rect key="frame" x="0.0" y="44" width="414" height="140"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="KCb-FG-INK">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="C49-Ey-nyN"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="OID-KF-0oM">
+                                        <rect key="frame" x="100" y="30" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="0hQ-hc-YEC"/>
+                                            <constraint firstAttribute="height" constant="60" id="PNI-Bn-O2q"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCw-7f-ssT">
+                                        <rect key="frame" x="95" y="100" width="319" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="u6j-Md-yob"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="KCb-FG-INK" secondAttribute="trailing" id="3wJ-SY-aRJ"/>
+                                    <constraint firstItem="KCb-FG-INK" firstAttribute="leading" secondItem="qHb-cw-q1t" secondAttribute="leading" id="Foa-vD-LCz"/>
+                                    <constraint firstItem="eCw-7f-ssT" firstAttribute="leading" secondItem="qHb-cw-q1t" secondAttribute="leading" constant="95" id="H4I-fv-ZLB"/>
+                                    <constraint firstItem="OID-KF-0oM" firstAttribute="leading" secondItem="qHb-cw-q1t" secondAttribute="leading" constant="100" id="Hy6-bI-1Nd"/>
+                                    <constraint firstItem="OID-KF-0oM" firstAttribute="top" secondItem="qHb-cw-q1t" secondAttribute="top" constant="30" id="WJx-yd-zi8"/>
+                                    <constraint firstItem="eCw-7f-ssT" firstAttribute="top" secondItem="OID-KF-0oM" secondAttribute="bottom" constant="10" id="feE-iF-zEF"/>
+                                    <constraint firstItem="KCb-FG-INK" firstAttribute="top" secondItem="qHb-cw-q1t" secondAttribute="top" id="jqb-ul-xly"/>
+                                    <constraint firstAttribute="bottom" secondItem="eCw-7f-ssT" secondAttribute="bottom" constant="20" id="nZc-Ks-ouB"/>
+                                    <constraint firstAttribute="height" constant="140" id="sBq-KG-ltA"/>
+                                    <constraint firstAttribute="trailing" secondItem="eCw-7f-ssT" secondAttribute="trailing" id="uje-9t-4r0"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oFN-Xd-d4c">
+                                <rect key="frame" x="0.0" y="184" width="304" height="678"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hWk-Wq-pq4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oFN-Xd-d4c" firstAttribute="top" secondItem="qHb-cw-q1t" secondAttribute="bottom" id="20U-5p-JCg"/>
+                            <constraint firstItem="hWk-Wq-pq4" firstAttribute="bottom" secondItem="oFN-Xd-d4c" secondAttribute="bottom" id="Emp-0Y-JRO"/>
+                            <constraint firstItem="oFN-Xd-d4c" firstAttribute="leading" secondItem="hWk-Wq-pq4" secondAttribute="leading" id="HDe-MV-vb7"/>
+                            <constraint firstItem="qHb-cw-q1t" firstAttribute="top" secondItem="hWk-Wq-pq4" secondAttribute="top" id="PHF-MK-X3H"/>
+                            <constraint firstItem="qHb-cw-q1t" firstAttribute="leading" secondItem="hWk-Wq-pq4" secondAttribute="leading" id="pQT-4m-dh3"/>
+                            <constraint firstItem="hWk-Wq-pq4" firstAttribute="trailing" secondItem="oFN-Xd-d4c" secondAttribute="trailing" constant="110" id="sPF-hp-HVb"/>
+                            <constraint firstItem="qHb-cw-q1t" firstAttribute="trailing" secondItem="hWk-Wq-pq4" secondAttribute="trailing" id="ttb-53-TLo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgOutletUserImage" destination="OID-KF-0oM" id="EPZ-RE-uP3"/>
+                        <outlet property="lblOutletUserName" destination="eCw-7f-ssT" id="ba5-EB-0KH"/>
+                        <outlet property="tblOutletMenu" destination="oFN-Xd-d4c" id="g14-mD-6Dy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rB3-iK-cmy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611.59420289855075" y="-577.23214285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="reY-yA-4jO">
+            <objects>
+                <navigationController id="sD1-eP-wXF" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZM0-Yu-4SC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yEM-VA-69d" kind="relationship" relationship="rootViewController" id="wMW-VS-lrW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UOQ-cU-AJS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="613" y="100"/>
+        </scene>
+        <!--CenterVC-->
+        <scene sceneID="c14-eI-hPE">
+            <objects>
+                <viewController storyboardIdentifier="PSLMCenterVC" id="yEM-VA-69d" customClass="PSLMCenterVC" customModule="Photo_Studio_Lab_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TnS-l0-USJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Zhk-iy-gCq"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IAH-dN-Jch">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="menu" id="WdM-vR-M4Y">
+                            <connections>
+                                <action selector="btnActionmenu:" destination="yEM-VA-69d" id="i9B-zW-iR7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mtM-1T-2GP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1484" y="100"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eCk-Ox-fuH">
+            <objects>
+                <viewController id="VNO-aJ-bAx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DB9-R1-xCE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="y33-Uk-PAG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nuf-Tl-vSB">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="menu" id="bZT-ix-T0l">
+                            <connections>
+                                <action selector="btnActionmenu:" destination="yEM-VA-69d" id="I2I-SC-O51"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ts7-pq-kSA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2383" y="-895"/>
+        </scene>
+        <!--Oder-->
+        <scene sceneID="Imn-1f-1ex">
+            <objects>
+                <viewController storyboardIdentifier="PSLMorderVC" title="Oder" id="BGc-Xq-ytd" customClass="PSLMorderVC" customModule="Photo_Studio_Lab_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p4v-NY-1Ge">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="QVW-r8-wK2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bqf-DI-9tt">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="menu" id="DAo-NU-v8m">
+                            <connections>
+                                <action selector="btnActionmenu:" destination="BGc-Xq-ytd" id="jwc-ZT-aAr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dRc-ll-M28" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2383" y="-224"/>
+        </scene>
+        <!--Customer-->
+        <scene sceneID="LnW-0H-Tgc">
+            <objects>
+                <viewController storyboardIdentifier="PSLMcustomerVC" title="Customer" id="1yG-9X-NBt" customClass="PSLMcustomerVC" customModule="Photo_Studio_Lab_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="axX-RY-zm2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="UIC-a3-PH5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qNc-N2-Ohq">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="menu" id="r4P-qL-7QA">
+                            <connections>
+                                <action selector="btnActionmenu:" destination="1yG-9X-NBt" id="Yur-FB-mha"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rhs-d5-a1c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2383" y="434"/>
+        </scene>
+        <!--Album Delivery-->
+        <scene sceneID="3LO-mt-RtZ">
+            <objects>
+                <viewController storyboardIdentifier="PSLMalbumdeliveryVC" title="Album Delivery" id="t0k-ML-CMU" customClass="PSLMalbumdeliveryVC" customModule="Photo_Studio_Lab_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wys-55-hxV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="EFi-Je-b3o"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XM5-2q-idV">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="menu" id="xFs-tX-kbV">
+                            <connections>
+                                <action selector="btnActionmenu:" destination="t0k-ML-CMU" id="sSf-Lf-xie"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4KT-zb-fk7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2383" y="1094"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gradient" width="1000" height="700"/>
+        <image name="menu" width="27" height="27"/>
+        <image name="user" width="512" height="512"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
