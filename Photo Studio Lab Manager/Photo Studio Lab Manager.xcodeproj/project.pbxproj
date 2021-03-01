@@ -28,6 +28,9 @@
 		B18A8F9525ECFE820048E2E1 /* PSLMcustomerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18A8F9425ECFE820048E2E1 /* PSLMcustomerVC.swift */; };
 		B18A8F9A25ECFE910048E2E1 /* PSLMalbumdeliveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18A8F9925ECFE910048E2E1 /* PSLMalbumdeliveryVC.swift */; };
 		B18A8FAD25ED03280048E2E1 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B18A8FAC25ED03280048E2E1 /* Auth.storyboard */; };
+		B18A8FEC25ED1CA10048E2E1 /* PSLMLogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18A8FEB25ED1CA10048E2E1 /* PSLMLogInVC.swift */; };
+		B18A8FF425ED1CB60048E2E1 /* PSLMSignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18A8FF325ED1CB60048E2E1 /* PSLMSignInVC.swift */; };
+		B18A8FFA25ED1E740048E2E1 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18A8FF925ED1E740048E2E1 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,9 @@
 		B18A8F9425ECFE820048E2E1 /* PSLMcustomerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSLMcustomerVC.swift; sourceTree = "<group>"; };
 		B18A8F9925ECFE910048E2E1 /* PSLMalbumdeliveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSLMalbumdeliveryVC.swift; sourceTree = "<group>"; };
 		B18A8FAC25ED03280048E2E1 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		B18A8FEB25ED1CA10048E2E1 /* PSLMLogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSLMLogInVC.swift; sourceTree = "<group>"; };
+		B18A8FF325ED1CB60048E2E1 /* PSLMSignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSLMSignInVC.swift; sourceTree = "<group>"; };
+		B18A8FF925ED1E740048E2E1 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		BE940048F92401550105790F /* Pods-Photo Studio Lab ManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photo Studio Lab ManagerTests.release.xcconfig"; path = "Target Support Files/Pods-Photo Studio Lab ManagerTests/Pods-Photo Studio Lab ManagerTests.release.xcconfig"; sourceTree = "<group>"; };
 		BF3FC711D8209E10B0842743 /* Pods-Photo Studio Lab ManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photo Studio Lab ManagerTests.debug.xcconfig"; path = "Target Support Files/Pods-Photo Studio Lab ManagerTests/Pods-Photo Studio Lab ManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF555C4562C4A0D4369CEC63 /* Pods-Photo Studio Lab Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photo Studio Lab Manager.debug.xcconfig"; path = "Target Support Files/Pods-Photo Studio Lab Manager/Pods-Photo Studio Lab Manager.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +160,8 @@
 				B18A8FAB25ED02720048E2E1 /* View */,
 				B18A8F9E25ED01B90048E2E1 /* Controller */,
 				B18A8FA725ED02510048E2E1 /* TableVIewCell */,
+				B18A8FEA25ED1C740048E2E1 /* Auth */,
+				B18A8FF825ED1E320048E2E1 /* Helper */,
 			);
 			path = "Photo Studio Lab Manager";
 			sourceTree = "<group>";
@@ -223,6 +231,23 @@
 				B18A8FAC25ED03280048E2E1 /* Auth.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B18A8FEA25ED1C740048E2E1 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B18A8FEB25ED1CA10048E2E1 /* PSLMLogInVC.swift */,
+				B18A8FF325ED1CB60048E2E1 /* PSLMSignInVC.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		B18A8FF825ED1E320048E2E1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B18A8FF925ED1E740048E2E1 /* Helper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		CAC747EF81C8CC0CD816AAD5 /* Pods */ = {
@@ -483,11 +508,14 @@
 				B18A8F9A25ECFE910048E2E1 /* PSLMalbumdeliveryVC.swift in Sources */,
 				B132A59D25E9FDAC00382094 /* ViewController.swift in Sources */,
 				B18A8F7F25ECEEC00048E2E1 /* PSLMCenterVC.swift in Sources */,
+				B18A8FEC25ED1CA10048E2E1 /* PSLMLogInVC.swift in Sources */,
 				B18A8F9525ECFE820048E2E1 /* PSLMcustomerVC.swift in Sources */,
 				B18A8F8425ECEF0F0048E2E1 /* PSLMLeftMenuVC.swift in Sources */,
+				B18A8FF425ED1CB60048E2E1 /* PSLMSignInVC.swift in Sources */,
 				B132A59925E9FDAC00382094 /* AppDelegate.swift in Sources */,
 				B132A64D25EA07B600382094 /* PSLMFirebaseAuthManager.swift in Sources */,
 				B18A8F9025ECFE700048E2E1 /* PSLMorderVC.swift in Sources */,
+				B18A8FFA25ED1E740048E2E1 /* Helper.swift in Sources */,
 				B18A8F8A25ECEF890048E2E1 /* PSLMLeftMenuCell.swift in Sources */,
 				B132A59B25E9FDAC00382094 /* SceneDelegate.swift in Sources */,
 			);
