@@ -7,23 +7,48 @@
 
 import UIKit
 
-class PSLMSignInVC: UIViewController {
+class PSLMSignUpVC: UIViewController {
 
+    @IBOutlet weak var txtOutletEmail: UITextField!
+    @IBOutlet weak var txtOutletPassword: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func btnActionSignupTouchUp(_ sender: UIButton) {
+        if (validateTextField())
+        {
+            print("Validation Success")
+        }
+        else
+        {
+            print("Error In Validation")
+        }
     }
-    */
+    
+    func validateTextField() -> Bool {
+        if(txtOutletEmail.text == "" || txtOutletEmail.text!.trimmingCharacters(in: .whitespaces) == "" ){
+            self.DisplayGlobalAlert(msg: "Please Enter Email Address")
+            return false
+        }
+        else if (txtOutletEmail.text!.trimmingCharacters(in: .whitespaces).isValidEmail != true)
+        {
+            self.DisplayGlobalAlert(msg: "Please Enter Valid Email Address")
+            return false
+        }
+        else if(txtOutletPassword.text == "" || txtOutletPassword.text!.trimmingCharacters(in: .whitespaces) == ""){
+            self.DisplayGlobalAlert(msg: "Please Enter Password")
+            return false
+        }
+        return true
+    }
 
+    @IBAction func btnActionLoginTouchUp(_ sender: Any) {
+        if let vc = storyboard?.instantiateViewController(identifier: "PSLMLogInVC")as? PSLMLogInVC {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
 }

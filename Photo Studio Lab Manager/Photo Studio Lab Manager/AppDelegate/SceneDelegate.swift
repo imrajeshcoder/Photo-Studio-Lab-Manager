@@ -10,46 +10,24 @@ import FAPanels
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    static var shared = SceneDelegate()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-       navigateToAuth()
-       // navigateToMain()
+        // 1. Capture the scene
+        if isLogin
+        {
+            AppDelegate.navigateToMain()
+        }
+        else
+        {
+            AppDelegate.navigateToAuth()
+        }
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
-    
-     func navigateToAuth(){
-        
-        let story = UIStoryboard(name: "Auth", bundle:nil)
-        let vc = story.instantiateViewController(withIdentifier: "AuthNavigationController")
-        UIApplication.shared.windows.first?.rootViewController = vc
-        UIApplication.shared.windows.first?.makeKeyAndVisible()
-        
-        
-        
-    }
-    
-     func navigateToMain(){
-        
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let leftMenuVC: PSLMLeftMenuVC = mainStoryboard.instantiateViewController(withIdentifier: "PSLMLeftMenuVC") as! PSLMLeftMenuVC
-        let centerVC: PSLMCenterVC = mainStoryboard.instantiateViewController(withIdentifier: "PSLMCenterVC") as! PSLMCenterVC
-        let centerNavVC = UINavigationController(rootViewController: centerVC)
-
-        //  Set the Panel controllers with just two lines of code
-
-        let rootController: FAPanelController = window?.rootViewController as! FAPanelController
-        rootController.center(centerNavVC).left(leftMenuVC)
-        
-        
-        
-    }
-    
-    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

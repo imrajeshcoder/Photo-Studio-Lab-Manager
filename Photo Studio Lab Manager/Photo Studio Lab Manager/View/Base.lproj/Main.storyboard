@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -101,7 +102,7 @@
         <!--Navigation Controller-->
         <scene sceneID="reY-yA-4jO">
             <objects>
-                <navigationController id="sD1-eP-wXF" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DashbordNavigationController" id="sD1-eP-wXF" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZM0-Yu-4SC">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -122,7 +123,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Zhk-iy-gCq"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="IAH-dN-Jch">
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="menu" id="WdM-vR-M4Y">
@@ -187,8 +188,30 @@
                     <view key="view" contentMode="scaleToFill" id="axX-RY-zm2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aJP-x4-QIi">
+                                <rect key="frame" x="10" y="54" width="394" height="51"/>
+                                <segments>
+                                    <segment title="Register Costomer"/>
+                                    <segment title="Pending For approve"/>
+                                </segments>
+                            </segmentedControl>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="WR9-I0-WvX">
+                                <rect key="frame" x="0.0" y="114" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UIC-a3-PH5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WR9-I0-WvX" firstAttribute="leading" secondItem="UIC-a3-PH5" secondAttribute="leading" id="858-Pp-bxl"/>
+                            <constraint firstItem="WR9-I0-WvX" firstAttribute="top" secondItem="aJP-x4-QIi" secondAttribute="bottom" constant="10" id="99u-ay-k3E"/>
+                            <constraint firstItem="aJP-x4-QIi" firstAttribute="top" secondItem="UIC-a3-PH5" secondAttribute="top" constant="10" id="Ddj-Zk-hfi"/>
+                            <constraint firstItem="aJP-x4-QIi" firstAttribute="leading" secondItem="UIC-a3-PH5" secondAttribute="leading" constant="10" id="ErT-Nw-ent"/>
+                            <constraint firstItem="UIC-a3-PH5" firstAttribute="trailing" secondItem="aJP-x4-QIi" secondAttribute="trailing" constant="10" id="eTP-q5-I1u"/>
+                            <constraint firstItem="WR9-I0-WvX" firstAttribute="trailing" secondItem="UIC-a3-PH5" secondAttribute="trailing" id="oo4-7I-jbr"/>
+                            <constraint firstItem="aJP-x4-QIi" firstAttribute="height" secondItem="axX-RY-zm2" secondAttribute="height" multiplier="50:896" id="xjK-OW-eoi"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qNc-N2-Ohq">
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="menu" id="r4P-qL-7QA">
@@ -237,6 +260,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

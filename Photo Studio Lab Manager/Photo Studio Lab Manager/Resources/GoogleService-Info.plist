@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleExecutable</key>
-	<string></string>
-	<key>CFBundleIdentifier</key>
-	<string></string>
 	<key>CLIENT_ID</key>
 	<string>132562912248-ijsh4ep5784fde6u5ve14sceii81pba2.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
@@ -34,5 +30,7 @@
 	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:132562912248:ios:e91db55098a5a6adb70c0d</string>
+	<key>DATABASE_URL</key>
+	<string>https://photo-studio-lab-manage-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

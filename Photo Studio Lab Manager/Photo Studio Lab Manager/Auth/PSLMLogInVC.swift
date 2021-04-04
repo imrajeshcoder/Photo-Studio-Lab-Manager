@@ -6,29 +6,49 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class PSLMLogInVC: UIViewController {
-
     @IBOutlet weak var txtOutletEmail: UITextField!
     @IBOutlet weak var txtOutletPassword: UITextField!
+    let FAM = FirebaseAuthManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func btnActionLoginTouchUp(_ sender: UIButton) {
-        if validateTextField(){
-            print("Validation True")
-        }
-        else
-        {
-            print("NOT")
-        }
         
     }
     
+    @IBAction func btnActionLoginTouchUp(_ sender: UIButton) {
+       // AppDelegate.navigateToMain()
+        
+        if validateTextField()
+        {
+            print("Validation True")
+            FAM.signIn(email: String(txtOutletEmail.text!), pass: String(txtOutletPassword.text!)) { (signInResult) in
+                print(signInResult)
+                if (signInResult == 0)
+                {
+                    //print("Successfully login")
+                    //print(Auth.auth().currentUser!.email!)
+                    isLogin = true
+                    userID = Auth.auth().currentUser!.uid
+                   // userName = (Auth.auth().currentUser?.displayName)!
+                    AppDelegate.navigateToMain()
+                }
+                else
+                {
+                    self.DisplayGlobalAlert(msg: dicSignInError[signInResult]!)
+                }
+                }
+            }
+            else
+            {
+                print("NOT")
+            }
+    }
+    
     @IBAction func btnActionCreateUserTouchUp(_ sender: UIButton) {
+        if let vc = storyboard?.instantiateViewController(identifier: "PSLMSignUpVC")as? PSLMSignUpVC {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func validateTextField() -> Bool {
@@ -38,6 +58,7 @@ class PSLMLogInVC: UIViewController {
         }
         else if (txtOutletEmail.text!.trimmingCharacters(in: .whitespaces).isValidEmail != true)
         {
+            self.DisplayGlobalAlert(msg: "Please Enter Valid Email Address")
             return false
         }
         else if(txtOutletPassword.text == "" || txtOutletPassword.text!.trimmingCharacters(in: .whitespaces) == ""){
@@ -45,16 +66,8 @@ class PSLMLogInVC: UIViewController {
             return false
         }
         return true
-        
     }
-    /*
-    // MARK: - Navigation
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

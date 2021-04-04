@@ -8,6 +8,7 @@ target 'Photo Studio Lab Manager' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
   pod 'Firebase/Auth'
   pod 'FAPanels'
   pod 'IQKeyboardManagerSwift'

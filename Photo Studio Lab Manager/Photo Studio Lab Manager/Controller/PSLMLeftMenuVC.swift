@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import FirebaseAuth
+import FirebaseStorage
 class PSLMLeftMenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
     
@@ -37,6 +38,17 @@ class PSLMLeftMenuVC: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func setUserImageAndName() {
         imgOutletUserImage.layer.cornerRadius = 5
+        lblOutletUserName.text = userID
+        let storage = Storage.storage()
+        var reference: StorageReference!
+        reference = storage.reference(forURL: "gs://photo-studio-lab-manage.appspot.com/images/userimage/2KJwMwaOiYNDWeBrVQ9eczJZk4v2.png")
+        reference.downloadURL { (url, error) in
+            let data = NSData(contentsOf: url!)
+            let image = UIImage(data: data! as Data)
+            self.imgOutletUserImage.image = image
+            print( FirebaseAuthManager.getUserName(userId: userID) )
+        }
+        
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
